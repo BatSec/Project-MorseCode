@@ -31,8 +31,13 @@ code = {'a': ".-",
 
 
 def codeToText():
-    tmp = random.choice(string.ascii_lowercase)
-    print(code[tmp])
+    randchar = random.choice(string.ascii_lowercase)
+    morse = code[randchar]
+    uInput = input(morse)
+    if (uInput == randchar):
+        print("Correct answer!!")
+    else:
+        print("Wrong!")
 
 
 def main():
@@ -41,7 +46,8 @@ def main():
         print("Module under development...")
         main()
     elif (choice == 2):
-        codeToText()
+        for i in range(10):
+            codeToText()
         main()
     else:
         return 0
